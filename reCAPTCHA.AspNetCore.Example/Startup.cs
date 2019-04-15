@@ -34,12 +34,7 @@ namespace reCAPTCHA.AspNetCore.Example
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var recaptcha = Configuration.GetSection("RecaptchaSettings");
-            if (!recaptcha.Exists())
-                throw new ArgumentException("Missing RecaptchaSettings in configuration.");
-
-            services.Configure<RecaptchaSettings>(recaptcha);
-            services.AddTransient<IRecaptchaService, RecaptchaService>();
+            services.AddGoogleRecaptcha(Configuration.GetSection("RecaptchaSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,5 @@
 # reCAPTCHA.AspNetCore
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![nuget](https://img.shields.io/nuget/v/reCAPTCHA.AspNetCore.svg)](https://www.nuget.org/packages/reCAPTCHA.AspNetCore/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![nuget](https://img.shields.io/nuget/v/Unicorn.reCAPTCHA.AspNetCore.svg)](https://www.nuget.org/packages/Unicorn.reCAPTCHA.AspNetCore/)
 
 Google reCAPTCHA v2/v3 for ASP.NET Core 2
 
@@ -57,8 +57,7 @@ Note: This will also require you to have a setup such as Azure Key Vault (or sim
 Open Startup.cs and add the following code as shown below to your ConfigureServices method:
 
 ```csharp
-services.Configure<RecaptchaSettings>(Configuration.GetSection("RecaptchaSettings"));
-services.AddTransient<IRecaptchaService, RecaptchaService>();
+services.AddGoogleRecaptcha(Configuration.GetSection("RecaptchaSettings"));
 ```
 
 # Usage
