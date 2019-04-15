@@ -49,7 +49,7 @@ namespace reCAPTCHA.AspNetCore
                 throw new ValidationException("Google recaptcha response not found in form. Did you forget to include it?");
 
             var response = request.Form["g-recaptcha-response"];
-            var result = await Client.GetStringAsync($"https://www.google.com/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={response}");
+            var result = await Client.GetStringAsync($"https://{RecaptchaSettings.Domain}/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={response}");
             var captchaResponse = JsonConvert.DeserializeObject<RecaptchaResponse>(result);
 
             if (captchaResponse.success && antiForgery)
@@ -64,7 +64,7 @@ namespace reCAPTCHA.AspNetCore
             if (string.IsNullOrEmpty(responseCode))
                 throw new ValidationException("Google recaptcha response is empty?");
 
-            var result = await Client.GetStringAsync($"https://www.google.com/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={responseCode}");
+            var result = await Client.GetStringAsync($"https://{RecaptchaSettings.Domain}/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={responseCode}");
             var captchaResponse = JsonConvert.DeserializeObject<RecaptchaResponse>(result);
             return captchaResponse;
         }

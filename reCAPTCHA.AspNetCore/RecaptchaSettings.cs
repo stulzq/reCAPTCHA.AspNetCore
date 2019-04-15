@@ -6,6 +6,7 @@ namespace reCAPTCHA.AspNetCore
 {
     public class RecaptchaSettings
     {
+        public string Domain { get; set; } = "www.google.com";
         /// <summary>
         /// Google Recaptcha Secret Key
         /// </summary>
