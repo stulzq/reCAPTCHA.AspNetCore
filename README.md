@@ -7,12 +7,12 @@ Google reCAPTCHA v2/v3 for ASP.NET Core 2
 
 From the a command prompt
 ```bash
-dotnet add package reCAPTCHA.AspNetCore
+dotnet add package Unicorn.reCAPTCHA.AspNetCore
 ```
 
 You can also search for package via your nuget ui / website:
 
-https://www.nuget.org/packages/reCAPTCHA.AspNetCore/
+https://www.nuget.org/packages/Unicorn.reCAPTCHA.AspNetCore/
 
 # Requirements
 You must first have a **secret key** and a **site key** in order to use the reCAPTCHA service. This package supports v2 and v3 api keys. You can read more about reCAPTCHA v2, and v3 as well as sign up for free here: https://www.google.com/recaptcha/intro/
