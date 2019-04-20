@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.2.0.3</Version>
-    <Authors>Timothy D Meadows II</Authors>
+    <Version>2.2.1</Version>
+    <Authors>Timothy D Meadows II,stulzq</Authors>
     <PackageLicenseUrl>https://github.com/TimothyMeadows/reCAPTCHA.AspNetCore/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/stulzq/reCAPTCHA.AspNetCore/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stulzq/reCAPTCHA.AspNetCore/</RepositoryUrl>
@@ -14,11 +14,13 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>Unicorn.reCAPTCHA.AspNetCore</PackageId>
     <Product>Unicorn.reCAPTCHA.AspNetCore</Product>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>Using http clientfactory</PackageReleaseNotes>
+    <Company>Timothy D Meadows II,stulzq</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
   </ItemGroup>
 

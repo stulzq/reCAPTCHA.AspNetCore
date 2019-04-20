@@ -10,14 +10,9 @@ namespace reCAPTCHA.AspNetCore
     {
         public static IServiceCollection AddGoogleRecaptcha(this IServiceCollection services,IConfigurationSection configuration)
         {
+            services.AddHttpClient("GoogleRecaptcha",
+                c => c.BaseAddress = new Uri($"https://{configuration["Domain"]}"));
             services.Configure<RecaptchaSettings>(configuration);
-            services.AddScoped<IRecaptchaService, RecaptchaService>();
-            return services;
-        }
-
-        public static IServiceCollection AddGoogleRecaptcha(this IServiceCollection services,Action<RecaptchaSettings> options)
-        {
-            services.Configure(options);
             services.AddScoped<IRecaptchaService, RecaptchaService>();
             return services;
         }

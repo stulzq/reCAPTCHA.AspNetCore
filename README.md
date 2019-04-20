@@ -34,7 +34,8 @@ Add the follow entry to the file make sure to paste in your secret key and site 
 "RecaptchaSettings": {
     "SecretKey": "paste secret key here",
     "SiteKey": "paste site key here",
-    "Version": "v2"
+    "Version": "v2",
+	"Domain": "www.google.com"
   } 
 ```
 
@@ -46,7 +47,8 @@ This will open secrets.json. Add the follow entry to the file make sure to paste
 "RecaptchaSettings": {
     "SecretKey": "paste secret key here",
     "SiteKey": "paste site key here",
-    "Version": "v2"
+    "Version": "v2",
+	"Domain": "www.google.com"
   } 
 ```
 

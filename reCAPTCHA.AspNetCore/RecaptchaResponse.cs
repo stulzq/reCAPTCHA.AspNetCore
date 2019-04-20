@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace reCAPTCHA.AspNetCore
 {
     public class RecaptchaResponse
     {
-        public bool success { get; set; }
-        public decimal score { get; set; }
-        public string action { get; set; }
-        public DateTime challenge_ts { get; set; }
-        public string hostname { get; set; }
+        public bool Success { get; set; }
+        public decimal Score { get; set; }
+        public string Action { get; set; }
+        [JsonProperty("challenge_ts")]
+        public DateTime ChallengeTs { get; set; }
+        public string Hostname { get; set; }
     }
 }

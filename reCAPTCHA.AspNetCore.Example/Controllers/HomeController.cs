@@ -42,7 +42,7 @@ namespace reCAPTCHA.AspNetCore.Example.Controllers
             ViewData["Message"] = "Your contact page.";
 
             var recaptcha = await _recaptcha.Validate(Request);
-            if (!recaptcha.success)
+            if (!recaptcha.Success)
                 ModelState.AddModelError("Recaptcha", "There was an error validating recatpcha. Please try again!");
 
             return View(!ModelState.IsValid ? model : new ContactModel());
